@@ -15,6 +15,7 @@ open http://localhost:9630/build/sb-functions
 
 * (optional) `open http://localhost:9630/build/sb-functions` 
 
+### Result
 
 For now everything is ok.
 
@@ -59,7 +60,14 @@ I've tried `npm install http`, `npm install node-libs-browser`, but it didn't he
 
 The same problem was also with `stream`, but `npm install stream` helped.
 
+### If you want to check with Supabase
+
+* You need to have Docker installed
+
 ```shell
+npm install supabase
+npx supabase start
+
 curl -i \
     --location --request POST "http://127.0.0.1:54321/functions/v1/mre_example" \
     --header "Authorization: Bearer $(supabase status 2>&1 | grep "anon key" | awk -F': ' '{print $2}')" \
