@@ -1,0 +1,11 @@
+{:source-paths ["src" "supabase/functions"]
+
+
+ :builds
+ {:sb-functions {:target     :esm
+                 :runtime    :node
+                 :modules    {:index {:entries [mre-example.index]}}
+                 :output-dir "supabase/functions/mre_example"}}}
+
+
+
