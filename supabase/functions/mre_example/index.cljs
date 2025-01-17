@@ -3,4 +3,4 @@
 
 (js/Deno.serve
   (fn []
-      (js/Response. "Hello from Supabase Edge Function!")))
+      (js/Response. "Hello from Supabase Edge Functions!")))
